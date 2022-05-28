@@ -1,0 +1,15 @@
+{
+    "editor.mouseWheelZoom": true,
+    "editor.tokenColorCustomizations": {
+      "comments": "#89f47f", // 注释
+     "keywords": "#cd77ff", // 关键字
+      "variables": "#57aefa", // 变量名
+      "strings": "#ffda8fbd", // 字符串
+      "functions": "#feffcc", // 函数名
+      "numbers": "#ffffff", // 数字
+
+  },
+  "files.associations": {
+    "stdio.h": "c"
+  },
+}
