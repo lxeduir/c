@@ -37,8 +37,6 @@ void output(stu *p)
 }
 void main()
 {
-    system("chcp 65001");
-    system("cls");
     stu *p;
     p = creat();
     output(p);
