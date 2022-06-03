@@ -1,18 +1,18 @@
 #include<stdio.h>
 #include<malloc.h>
 
-typedef struct link
+ struct link
 {
     long a;
-    LINKS *next;
-}LINKS;
+    struct link *next;
+};
 
 int main(){
-   LINKS *h ,*p,*q;
-   h=p=(LINKS *)malloc(sizeof(LINKS));
+   struct link *h ,*p,*q;
+   h=p=(struct link *)malloc(sizeof(struct link));
    h->a=0;
 for(long i=1;i<1000000;i++){
-q=(LINKS *)malloc(sizeof(LINKS));
+q=(struct link *)malloc(sizeof(struct link));
 q->a=i;
 p->next=q;
 p=q;
