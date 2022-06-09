@@ -5,7 +5,7 @@ void fun(long s, long *t)
     long s1=1;
     while (s > 0)
     {
-    *t = *t+ (s/10 % 10)*s1;
+    *t = *t+ s/10 % 10*s1;
     s/=100;
     s1*=10;
    

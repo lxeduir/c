@@ -21,10 +21,10 @@ main()
     temp = getchar();
     printf("Enter num[0] num[1] ... num[%d]:", n - 1);
     for (i = 0; i < n; i++)
-        scanf("%d", &num[i]);
+        scanf("%c", &num[i]);
     p = num;
     sort(p, n);
     printf("Result is:\n");
     for (i = 0; i < n; i++)
-        printf("%d ", num[i]);
+        printf("%c ", num[i]);
 }

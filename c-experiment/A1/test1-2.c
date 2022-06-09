@@ -4,6 +4,10 @@ int a[N][N];
 void creat(int n)
 {
     int i, j, s;
+    FILE *fp;
+    if ((fp = fopen("test1-2.dat", "w")) == NULL)
+        printf("cannot open file\n");
+
     for (i = 0; i < n; i++)
     {
         s = 1 + i * 4;
@@ -11,10 +15,14 @@ void creat(int n)
         {
             a[i][j] = s;
             printf("%d\t", a[i][j]);
+            fprintf(fp, "%d\t", a[i][j]);
             s += 2;
         }
         printf("\n");
+        fprintf(fp, "\n");
     }
+
+    fclose(fp);
 }
 
 int main()
@@ -29,14 +37,4 @@ AA:
     }
     else
         creat(m);
-    FILE *fp;
-    if ((fp = fopen("test1-2.dat", "w")) == NULL)
-        printf("cannot open file\n");
-    for (i = 0; i < m; i++)
-    {
-        for (j = 0; j <= i; j++)
-      fprintf(fp, "%d\t", a[i][j]);
-      fprintf(fp, "\n");
-    }
-    fclose(fp);
 }
