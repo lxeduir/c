@@ -8,7 +8,7 @@ void fun(char *s, char t[])
         t[i]=*s;
         i++;
     }
-    s++;
+    s++;//指针移位
     }
     t[i]='\0';
 
