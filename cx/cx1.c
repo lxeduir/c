@@ -1,22 +1,28 @@
-#include <stdio.h>
+#include<stdio.h>
+int fun(float a[20],int n)
+{	int j;
+	 float average=0,sum=0,max=a[0],min=a[0];
+	for(j=0;j<n;j++)
+	{
+		sum+=a[j];
+        		if(a[j]>max)max=a[j];
+		else if(a[j]<min)min=a[j];
+	}
 
-int fun(int m)
-{  int i, k ;
-   for (i = m + 1 ; ; i++) {
-      for (k = 2 ; k < i ; k++)
-/**************found**************/
-         if (i % k == 0)
-            break ;
-/**************found**************/
-         if (k >= i)
-           return(i);
-   }
+	
+	average=(sum-max-min)/(n-2);
+	return average;
 }
-
-void main()
+int main()
 {
-  int n ;
-  n = fun(20) ;
-  printf("n=%d\n", n) ;
-  getchar();
+	float s[20]={0},i=0,n=0;
+    for(i=0;;i++)
+	{
+		scanf("%d ",s);
+		n++;
+	}
+	float ret=fun(s,n);
+		printf("得分个数%d\n",n);
+		printf("平均得分%d\n",ret);
+		return 0;
 }

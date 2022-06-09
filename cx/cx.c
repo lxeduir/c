@@ -1,27 +1,24 @@
 #include<stdio.h>
-#include<malloc.h>//引用malloc的库文件
-struct link{
-    int data;
-    struct link *next;//注意定义指针的标识符
-};
+#define N 5
+int a[1][1],n;
+void creat(int n){
+int i,j;
+for(i=1;i<n;i++){
+a[i][0]=a[i-1][0]+4;
+for(j=1;j<i+1;j++){
+a[i][j]=a[i][j-1]+2;
+}
+}
+for(i=0;i<n;i++){
+for(j=0;j<i+1;j++){
+printf("%d\t",a[i][j]);
+}
+printf("\n");
+}
+}
 int main(){
-    struct link *head,*p,*q,*t;
-    int i,n,a;
-    scanf("%d",&n);
-    head=NULL;
-    for(i=0;i<n;i++){
-        p=(struct link *)malloc(sizeof(struct link));
-        scanf("%d",&a);
-        p->data=a;
-        p->next=NULL;
-        if(head=NULL)head=p;
-        else q->next=p;
-        q=p;
-    }
-    t=head;
-    while(t!=NULL){
-        printf("%d",t->data);
-        t=t->next;
-    }
-    return 0;
+a[0][0]=1;
+scanf("%d",&n);
+creat(n);
+return 0;
 }
